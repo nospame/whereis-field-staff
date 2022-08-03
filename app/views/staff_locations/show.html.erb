@@ -1,0 +1,11 @@
+<h1>Location successfully logged!</h1>
+<% staff_location = StaffLocation.find_by(id: params[:id]) %>
+<p>
+<%= staff_location.name %>,
+<%= staff_location.country_code %>
+<br />
+<%= staff_location.lat %>,
+<%= staff_location.lng %>
+<br />
+<%= staff_location.staff_member.email %>
+</p>

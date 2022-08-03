@@ -1,0 +1,11 @@
+GET http://api.geonames.org/search?name=Sacramento&maxRows=5&type=json&username=dimagi&password=dimagi
+
+###
+POST http://localhost:3000/staff_locations
+Content-Type: application/json
+
+{
+  "email": "evan@dimagi.com",
+  "location": "Denver",
+  "country": "US"
+}

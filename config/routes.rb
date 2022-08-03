@@ -1,3 +1,5 @@
 Rails.application.routes.draw do
-  post "staff_locations" => "staff_locations#create"
+  resources :staff_locations
+  
+  post "staff_locations/new" => "staff_locations#create"
 end

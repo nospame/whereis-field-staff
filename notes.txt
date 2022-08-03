@@ -1,0 +1,35 @@
+Frontend
+  User inputs "information" into a web form
+  Form data is submitted to backend
+  Form data is validated
+  User receives confirmation on frontend
+    Display of "normalized output" [person, time, and location (latitude and longitude)]
+
+
+Backend
+  Receives form data from frontend
+  x Makes API call to geonames.org
+  OR processes info internally to determine location
+  x Saves "normalized output" to database
+  x Returns that output to frontend as JSON to display
+
+Breakdown:
+  add db w/ tables
+  add routes for db info
+    'create' route to include API call
+    'create' route should take in staff_member email
+  generate dummy data
+
+  build frontend form
+    fields:
+      email
+      location
+      country? (to aid lookup)
+
+Do I need to deal with timezones for timestamps?
+  timestamps are in UTC, could show back to user in local time
+  
+Do I want to build a separate frontend or use Rails fullstack?
+  probably fullstack for prototyping
+
+Fuzzy matching w/ API or exact?

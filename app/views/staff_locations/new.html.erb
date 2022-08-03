@@ -1,0 +1,12 @@
+<%= form_with url: "/staff_locations" do |form| %>
+  <%= form.label :email, "Staff Member Email:" %>
+  <%= form.text_field :email %> 
+  <br />
+  <%= form.label :name, "Location Name:" %>
+  <%= form.text_field :name %> 
+  <br />
+  <%= form.label :country, "Country (abbreviation):" %>
+  <%= form.text_field :country %>
+  <br />
+  <%= form.submit "Submit Location" %>
+<% end %>
