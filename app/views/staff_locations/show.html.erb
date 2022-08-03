@@ -1,11 +1,18 @@
-<h1>Location successfully logged!</h1>
+<h1>Logged Info</h1>
 <% staff_location = StaffLocation.find_by(id: params[:id]) %>
+<%= staff_location.created_at %>
+<h2>Location</h2>
 <p>
-<%= staff_location.name %>,
-<%= staff_location.country_code %>
-<br />
-<%= staff_location.lat %>,
-<%= staff_location.lng %>
-<br />
-<%= staff_location.staff_member.email %>
+  <%= staff_location.name %>,
+  <%= staff_location.country_code %>
+  <br />
+  <%= staff_location.lat %>,
+  <%= staff_location.lng %>
 </p>
+<h2>Staff Member</h2>
+<p>
+  <%= staff_location.staff_member.name %>
+  <br />
+  <%= staff_location.staff_member.email %>
+</p>
+<%= link_to "Back to Log Location", "new" %>

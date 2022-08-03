@@ -1,12 +1,16 @@
+<h1>Log Your Location</h1>
 <%= form_with url: "/staff_locations" do |form| %>
+<div>
   <%= form.label :email, "Staff Member Email:" %>
   <%= form.text_field :email %> 
-  <br />
-  <%= form.label :name, "Location Name:" %>
+</div>
+<div>  
+  <%= form.label :name, "Place Name:" %>
   <%= form.text_field :name %> 
-  <br />
-  <%= form.label :country, "Country (abbreviation):" %>
+</div>
+<div>
+  <%= form.label :country, "2 Letter Country Code:" %>
   <%= form.text_field :country %>
-  <br />
+</div>
   <%= form.submit "Submit Location" %>
 <% end %>
