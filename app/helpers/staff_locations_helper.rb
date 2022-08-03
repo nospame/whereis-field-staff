@@ -1,0 +1,2 @@
+module StaffLocationsHelper
+end

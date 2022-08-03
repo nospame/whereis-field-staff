@@ -1,0 +1,2 @@
+class StaffLocation < ApplicationRecord
+end
