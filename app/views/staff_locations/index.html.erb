@@ -1,0 +1,15 @@
+<h1>Location Logs</h1>
+<% staff_locations = StaffLocation.all.order('id desc').includes(:staff_member) %>
+<% staff_locations.each do |staff_location|%>
+  <h3>Location</h3>
+  <p>
+    <%= staff_location.name %>,
+    <%= staff_location.country_code %>
+  </p>
+  <h3>Staff Member</h3>
+  <p>
+    <%= staff_location.staff_member.email %>
+  </p>
+  <%= staff_location.created_at %>
+  <hr />
+<% end %>

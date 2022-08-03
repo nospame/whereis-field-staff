@@ -1,0 +1,11 @@
+<h1>Staff Members</h1>
+<% staff_members = StaffMember.all.order('email')%>
+<% staff_members.each do |staff_member| %>
+  <p>
+    <%= staff_member.name %>,
+    <%= staff_member.email %>
+    <br />
+    <%= link_to "Locations", "#{staff_member.id}" %>
+  </p>
+  <hr />
+<% end %>

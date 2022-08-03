@@ -1,0 +1,13 @@
+<% staff_member = StaffMember.find_by(id: params[:id]) %>
+<h1>Logged Locations for 
+  <%= staff_member.name %>
+  </h1>
+<% staff_member.staff_locations.order('created_at desc').each do |staff_location|%>
+  <h3>Location</h3>
+  <p>
+    <%= staff_location.name %>,
+    <%= staff_location.country_code %>
+    at
+    <%= staff_location.created_at %>
+  <hr />
+<% end %>

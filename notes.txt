@@ -1,7 +1,7 @@
 Frontend
   x User inputs "information" into a web form
   x Form data is submitted to backend
-  Form data is validated
+  !Form data is validated
   x User receives confirmation on frontend
     Display of "normalized output" [person, time, and location (latitude and longitude)]
 
@@ -26,7 +26,14 @@ Breakdown:
       location
       country? (to aid lookup)
 
-  add validation / error handling
+  !add validation / error handling
+
+Stretch:
+  Add the ability to query someone's location at a given date/time.
+    look up a user (by id or email?)
+    find their associated staff_locations
+    find the staff_location that falls immediately before a given time/date
+    
 
 Do I need to deal with timezones for timestamps?
   timestamps are in UTC, could show back to user in local time

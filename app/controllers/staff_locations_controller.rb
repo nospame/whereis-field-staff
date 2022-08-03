@@ -22,25 +22,26 @@ class StaffLocationsController < ApplicationController
     
   end
 
-  # move logic out of controller
-  def get_locations(params)
-    base_url = "http://api.geonames.org/search"
-    username = "dimagi"
-    password = "dimagi"
-    name = params[:name]
-    country = params[:country]
-    type = "json"
-    max_rows = 5
-    
-    response = HTTP.get(base_url + 
-      "?name=#{name}" + 
-      "&country=#{country}" + 
-      "&username=#{username}" +
-      "&password=#{password}" +
-      "&type=#{type}" +
-      "&maxRows=#{max_rows}")
-      .parse(:json)
+  # move logic out of controller?
+  private
+    def get_locations(params)
+      base_url = "http://api.geonames.org/search"
+      username = "dimagi"
+      password = "dimagi"
+      name = params[:name]
+      country = params[:country]
+      type = "json"
+      max_rows = 1
+      
+      response = HTTP.get(base_url + 
+        "?name=#{name}" + 
+        "&country=#{country}" + 
+        "&username=#{username}" +
+        "&password=#{password}" +
+        "&type=#{type}" +
+        "&maxRows=#{max_rows}")
+        .parse(:json)
 
-    response["geonames"]
-  end
+      response["geonames"]
+    end
 end
